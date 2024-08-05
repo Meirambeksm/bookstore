@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="dist/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <span class="logo">Bookshop</span>
+        <ul class="navigation">
+          <li class="item active">Books</li>
+          <li class="item">Audiobooks</li>
+          <li class="item">Stationery & Gifts</li>
+          <li class="item">Blog</li>
+        </ul>
+        <div class="breadcrumbs">
+          <div class="breadcrumbs-item"></div>
+          <div class="breadcrumbs-item"></div>
+          <div class="breadcrumbs-item"></div>
+        </div>
+        <div class="icons">
+          <img class="icon" src="./assets/user.svg" alt="user icon" />
+          <img class="icon" src="./assets/search.svg" alt="search icon" />
+          <img
+            class="icon cart"
+            src="./assets/shopbag.svg"
+            alt="shop bag icon"
+          />
+          <div class="label">0</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="carousel">
+        <div class="carousel-img">
+          <img
+            class="carousel-banner"
+            src="./assets/banner1.png"
+            alt="carousel banner"
+          />
+
+          <div class="sticker">
+            <span class="sticker-text">Change old book on new</span>
+            <img src="./assets/arrow.svg" alt="arrow image" />
+          </div>
+
+          <div class="sticker">
+            <span class="sticker-text"
+              >Top <br />
+              100 <br />
+              books <br />
+              2022</span
+            >
+            <img src="./assets/arrow.svg" alt="arrow image" />
+          </div>
+        </div>
+
+        <div class="carousel-buttons">
+          <button class="carousel-btn active"></button>
+          <button class="carousel-btn"></button>
+          <button class="carousel-btn"></button>
+        </div>
+      </section>
+
+      <section class="content">
+        <ul class="sidebar">
+          <li class="sidebar-item active">Architecture</li>
+          <li class="sidebar-item">Art & Fashion</li>
+          <li class="sidebar-item">Biography</li>
+          <li class="sidebar-item">Business</li>
+          <li class="sidebar-item">Crafts & Hobbies</li>
+          <li class="sidebar-item">Drama</li>
+          <li class="sidebar-item">Fiction</li>
+          <li class="sidebar-item">Food & Drink</li>
+          <li class="sidebar-item">Health & Wellbeing</li>
+          <li class="sidebar-item">History & Politics</li>
+          <li class="sidebar-item">Humor</li>
+          <li class="sidebar-item">Poetry</li>
+          <li class="sidebar-item">Psychology</li>
+          <li class="sidebar-item">Science</li>
+          <li class="sidebar-item">Technology</li>
+          <li class="sidebar-item">Travel & Maps</li>
+        </ul>
+
+        <div class="cards"></div>
+      </section>
+    </main>
+    <div class="load-btn-wrapper">
+      <button class="load-btn">Load More</button>
+    </div>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
