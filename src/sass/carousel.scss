@@ -1,0 +1,74 @@
+@import "./mixins.scss";
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+
+    & > img {
+      width: 100%;
+      max-height: 702px;
+    }
+
+    .sticker {
+      @include sticker($color-sticker-primary, 149px, 204px, 20px, 195px, 80px);
+
+      &:last-child {
+        @include sticker(
+          $color-sticker-secondary,
+          158px,
+          273px,
+          47px,
+          475px,
+          -21px
+        );
+      }
+
+      & .sticker-text {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      & > img {
+        width: 55px;
+      }
+    }
+  }
+
+  .carousel-buttons {
+    display: flex;
+    gap: 10px;
+
+    .carousel-btn {
+      @include carousel-btn($color-btn-secondary);
+
+      &.active {
+        @include carousel-btn($color-btn-primary);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel {
+    margin: 0 20px;
+
+    .carousel-img {
+      .sticker {
+        display: none;
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
