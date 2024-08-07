@@ -1,0 +1,185 @@
+@import "./mixins.scss";
+
+.content {
+  margin-top: 105px;
+  display: flex;
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: $color-btn-secondary;
+    height: 710px;
+    padding-top: 46px;
+    padding-left: 160px;
+    padding-right: 139px;
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      color: $color-secondary;
+      font-size: 12px;
+      font-weight: 500;
+      width: 200px;
+      height: 30px;
+      white-space: nowrap;
+
+      &:hover,
+      &.active {
+        color: $color-primary;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 96px;
+    width: 924px;
+    margin: 46px 0 96px -60px;
+
+    .card {
+      display: flex;
+      height: 300px;
+      gap: 36px;
+      align-items: center;
+      overflow: hidden;
+
+      .card-poster {
+        width: 213px;
+        height: 300px;
+        background-color: $color-secondary;
+        overflow: hidden;
+
+        .card-poster-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .card-info {
+        display: flex;
+        flex-direction: column;
+        width: 176px;
+
+        .card-author {
+          font-family: "Open Sans";
+          color: $color-secondary;
+          margin-bottom: 4px;
+        }
+
+        .card-name {
+          font-size: 16px;
+          font-weight: 700;
+          color: $color-primary;
+          margin-bottom: 4px;
+
+          display: -webkit-box;
+          line-clamp: 3;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .card-review {
+          font-family: "Open Sans";
+          color: $color-secondary;
+        }
+
+        .card-description {
+          font-family: "Open Sans";
+          color: $color-secondary;
+          margin: 16px 0;
+          text-align: justify;
+
+          display: -webkit-box;
+          line-clamp: 3;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .card-price {
+          font-size: 13px;
+          font-weight: 700;
+          margin-bottom: 16px;
+        }
+
+        .card-btn {
+          @include card-button($color-btn-primary, $border-btn-primary);
+        }
+        .card-btn-purchased {
+          @include card-button($color-secondary, $color-btn-secondary);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    margin-top: 50px;
+
+    .cards {
+      margin: 35px 0 75px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    .sidebar {
+      gap: 20px;
+      flex-direction: row;
+      overflow-x: auto;
+      scrollbar-width: none;
+      height: fit-content;
+      align-items: center;
+      padding: 15px;
+      white-space: nowrap;
+
+      .sidebar-item {
+        flex: 0 0 auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-y: hidden;
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+
+    .cards {
+      margin: 40px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    .cards {
+      margin: 40px 20px;
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .content {
+    .cards {
+      row-gap: 50px;
+      .card {
+        gap: 13px;
+        .card-poster {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
